@@ -87,6 +87,10 @@ def post_route(post_slug):
 def about():
     return render_template('about.html', params=params)
 
+@app.route("/newsletter")
+def newsletter():
+    return render_template('newsletter.html', params=params)
+
 
 @app.route("/dashboard", methods=['GET', 'POST'])
 def dashboard():
