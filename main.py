@@ -143,7 +143,7 @@ def uploader():
         if (request.method == 'POST'):
             f= request.files['file1']
             f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename) ))
-            return "Uploaded successfully"
+            return "Uploaded Successfully"
 
 
 
@@ -181,3 +181,4 @@ def contact():
 
 
 app.run(debug=True)
+
