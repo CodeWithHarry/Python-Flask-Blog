@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, session, redirect
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug import secure_filename
+# from werkzeug import secure_filename
 from flask_mail import Mail
 import json
 import os
@@ -8,8 +8,8 @@ import math
 from datetime import datetime
 
 
-with open('config.json', 'r') as c:
-    params = json.load(c)["params"]
+
+params = json.load(open("./config.json", "r"))['params']
 
 local_server = True
 app = Flask(__name__)
@@ -44,7 +44,7 @@ class Posts(db.Model):
     sno = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80), nullable=False)
     slug = db.Column(db.String(21), nullable=False)
-    content = db.Column(db.String(120), nullable=False)
+    content = db.Column(db.String(1000), nullable=False)
     tagline = db.Column(db.String(120), nullable=False)
     date = db.Column(db.String(12), nullable=True)
     img_file = db.Column(db.String(12), nullable=True)
