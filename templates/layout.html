@@ -87,7 +87,20 @@
         </div>
       </div>
     </footer>
+    <!-- script for typed js -->
+    <script>
+      var typed = new Typed('#typed',{
+                      strings:["{{params['tag_line']}}","{{params['tag_line2']}}"],
+                      backSpeed: 25,
+                      smartBackspace: true,
+                      backDelay: 1200,
+                      startDelay: 1000,
+                      typeSpeed: 50,
+                      loop: true,
 
+                    });
+   </script>
+    
     <!-- Bootstrap core JavaScript -->
     <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
