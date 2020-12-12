@@ -73,12 +73,21 @@
               <button type="submit" class="btn btn-primary" id="sendMessageButton">Submit</button>
             </div>
           </form>
-
-
-
-
       
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+        textarea = document.querySelector("#content");
+        textarea.addEventListener('input', autoResize, false);
+
+        function autoResize() {
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        }
+    </script>
+
+
+
     {% endblock %}
